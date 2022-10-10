@@ -1,0 +1,26 @@
+
+@host = http://localhost:3001
+
+### Create Food
+
+POST {{host}}/signup
+Content-Type: multipart/form-data; boundary="boundary"
+
+--boundary
+Content-Disposition: form-data; name="name"
+
+NewUser
+--boundary
+Content-Disposition: form-data; name="email"
+
+Chad@email.com
+--boundary
+Content-Disposition: form-data; name="senha"
+
+1234567
+--boundary
+Content-Disposition: form-data; name="image"; filename="image.jpeg"
+Content-Type: image/jpeg
+
+< ./public/imgs/profile/image.jpeg
+--boundary--
